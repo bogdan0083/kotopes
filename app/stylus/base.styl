@@ -1,0 +1,336 @@
+html
+    box-sizing border-box
+    font-size 13px
+    +above(880px)
+        font-size 14px
+        min-height 100%
+        position relative
+*, *:before, *:after
+    box-sizing inherit
+
+
+generateClasses($spritesheet_sprites)
+
+body
+    color black
+    font-size 1rem
+    font-family 'Lato', sans-serif
+    font-weight 300
+    background-color: #fdfdfd
+    +above($screen-sm)
+        margin-bottom: 214px
+    +above($screen-md)
+        margin-bottom: 226px
+a
+    text-decoration underline
+    color $pink
+    transition all 0.3s
+    &:hover
+        color black
+        text-decoration none
+
+.colored-pink
+    color $pink
+
+.colored-gray
+    color $gray
+
+a.colored-pink
+    transition all 0.3s
+    &:hover
+        color $pink-dark
+
+a.colored-gray
+    transition all 0.3s
+    &:hover
+        color $black
+.icon
+    display inline-block
+    vertical-align middle
+    position relative
+    background-color: transparent
+    padding: 0
+    border none
+    &:before
+        content ''
+        position absolute
+        top 0
+        left 0
+        width 100%
+        height 100%
+        display block
+        opacity: 0
+        transition all 0.3s
+    &:after
+        content ''
+        top 0
+        left 0
+        position: absolute
+        opacity: 1
+        transition all 0.3s
+    + span
+        display inline-block
+        vertical-align middle
+
+.i-cross
+    &:before
+        sprite($cross_hover)
+
+.i-cart-pink
+    &:before
+        sprite($cart_pink_hover)
+
+.i-smartphone
+    &:before
+        sprite($smartphone_hover)
+
+.i-dog-small
+    &:before
+        sprite($dog_small_hover)
+
+.i-cat-small
+    &:before
+        sprite($cat_small_hover)
+    &-pink
+        sprite($cat_small_hover)
+.i-fish-small
+    &:before
+        sprite($fish_small_hover)
+    &-pink
+        sprite($fish_small_hover)
+.i-parrot-small
+    &:before
+        sprite($parrot_small_hover)
+    &-pink
+        sprite($parrot_small_hover)
+.i-mouse-small
+    &:before
+        sprite($mouse_small_hover)
+    &-pink
+        sprite($mouse_small_hover)
+.i-turtle-small
+    &:before
+        sprite($turtle_small_hover)
+    &-pink
+        sprite($turtle_small_hover)
+
+img
+    max-width 100%
+
+.nav-trigger-wrap
+    width: 30px
+    height: 30px
+    background-color: #f6f6f6
+    border-radius 50%
+    text-align: center
+    float: left
+    margin-right: -30px
+    margin-top: 3px
+
+.nav-trigger
+    margin: 0 auto
+    hamburger-generator(18px, 1px, 5px)
+    text-align center
+    margin-top 15px
+    position relative
+    z-index 10
+    &.active
+        hamburger-animation()
+    +above(880px)
+        display none
+
+.page-wrapper
+    transition all 0.3s
+    &.active
+        transform translateX(200px)
+.container
+    padding 0 10px
+    +above($screen-sm)
+        padding: 0 15px
+
+//.custom-select
+//    position relative
+//    height 34px
+//    margin-bottom 6px
+//    padding 0
+//    &:after
+//        content ''
+//        position absolute
+//        sprite($arrow_down)
+//        right 1px
+//        top 0
+//        pointer-events none
+//    select
+//        display: inline-block;
+//        width 100%
+//        padding: 8px 8px 3px 15px;
+//        margin: 0;
+//        font: inherit;
+//        outline:none; /* remove focus ring from Webkit */
+//        line-height: 1.2;
+//        background: transparent;
+//        color: black;
+//        border:0;
+//}
+
+.mobile-menu
+    background-color white
+    color black
+    width 200px
+    padding 20px
+    position fixed
+    left 0
+    top 0
+    min-height 100%
+    overflow auto
+    transition transform 0.3s
+    transform translateX(-100%)
+    &.active
+        transform translateX(0)
+    +above(880px)
+        display none
+    a, span
+        font-weight 700
+        text-transform uppercase
+        text-decoration none
+        display block
+        margin 10px 0
+        font-size 1.3rem
+        &:first-child
+            margin-top 0
+    span
+        color white
+
+
+.field
+    height: 40px
+    display: block
+    width: 100%
+    padding-left: 20px
+    padding-right: 20px
+    margin: 0 auto
+    background-color: #fdfcfc
+    border: 1px solid #dfdfdf
+    &-text
+        resize none
+        height: 100px
+        padding-top: 10px
+    &:focus
+        border-color: gray
+        outline none
+
+.amount-input
+    width 70px
+    height 40px
+    text-align center
+    position relative
+    &-sub, &-add
+        top 50%
+        margin-top: -11px
+        left 6px
+        border none
+        position absolute
+        transition all 0.3s
+        opacity: 0.5
+        &:hover
+            opacity: 1
+        &:focus
+            outline none
+    &-add
+        left auto
+        right 6px
+    .field
+        width 100%
+        height 40px
+        text-align center
+        padding 0
+        padding-left: 25px
+        padding-right: 25px
+        box-sizing border-box
+
+.section-title
+    position: relative
+    overflow: hidden
+    &-link
+        float: right
+        margin-top: 26px
+        background-color: #fdfdfd
+        position: relative
+        z-index: 2
+        display: inline-block
+        text-decoration: none
+        padding-left: 20px
+        span
+            border-bottom: 1px dotted pink
+    +above($screen-sm)
+        padding-left: 40px
+        .icon
+            position: absolute
+            left 0
+            top 50%
+            transform translateY(-50%)
+
+.section-heading
+    font-size: 1.3rem
+    text-transform: uppercase
+    font-weight: 300
+    line-height: 1.4
+    +above($screen-sm)
+        font-size: 1.7rem
+        span
+            position: relative
+            display: inline-block
+            &:after
+                content ''
+                height: 1px
+                width: 1200px
+                background-color: #f1f1f1
+                position: absolute
+                transform translateX(100%)
+                right -20px
+                top 50%
+                margin-top: -1px
+
+
+.fadeInUp
+    animation fadeInUp
+
+.animated
+    animation-fill-mode both
+
+.i-aqua
+    &:before
+        sprite($aqua_hover)
+.i-castle
+    &:before
+        sprite($castle_hover)
+.i-korm
+    &:before
+        sprite($korm_hover)
+.i-oborud
+    &:before
+        sprite($oborud_hover)
+.i-fish-for
+    &:before
+        sprite($fish_for_hover)
+
+.i-aqua-big
+    &:before
+        sprite($aqua_big_hover)
+.i-castle-big
+    &:before
+        sprite($castle_big_hover)
+.i-korm-big
+    &:before
+        sprite($korm_big_hover)
+.i-oborud-big
+    &:before
+        sprite($oborud_big_hover)
+.i-fish-for-big
+    &:before
+        sprite($fish_for_big_hover)
+
+.icon-cross {
+    width: 0.688em;
+    height: 0.688em;
+}

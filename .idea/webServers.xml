@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="84d3e872-b980-48ac-ba5a-483ae6ac4655" name="pearl" url="http://ftp.pearl32.nichost.ru">
+        <fileTransfer host="ftp.pearl32.nichost.ru" port="21" username="pearl32_ftp">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

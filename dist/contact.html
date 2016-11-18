@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Главная</title>
+	<!--meta(name='description' content='')-->
+	<!--meta(name='keywords' content='')-->
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+<div class="mobile-menu">
+	<nav class="mobile-nav">
+		<a href="">о компании</a><a href="">наши магазины</a><a href="">доставка и оплата</a><a href="">оптовым
+		клиентам</a><a href="">контакты</a>
+	</nav>
+</div>
+<div class="page-wrapper">
+	<!-- begin header -->
+	<header class="header">
+		<div class="container">
+			<div class="nav-trigger-wrap">
+				<a href="" class="nav-trigger"></a>
+			</div>
+			<a href="" class="logo"><img src="images/logo.png" alt="Котопёс - зоомаркет"></a>
+			<button class="mobile-search-trigger js-mobile-search-trigger"></button>
+			<h2 class="">Товары для животных<br>
+				оптом и в розницу<br>
+				по Саратову и области</h2>
+			<a href="" class="mobile-call btn"><i class="icon i-smartphone"></i><span>позвонить</span></a>
+			<div class="header-content">
+				<nav class="main-nav hidden-xs">
+					<a href="">о компании</a>
+					<a href="">наши магазины</a>
+					<a href="">доставка и оплата</a>
+					<a href="">оптовым клиентам</a>
+					<span>контакты</span>
+					<div class="line"></div>
+				</nav>
+				<form class="search-form">
+					<input type="search" class="field field-search" placeholder="Начните вводить запрос" name="search">
+					<button class="icon i-search"></button>
+				</form>
+				<a class="cart-block" href="">
+					<div class="icon-wrap">
+						<i class="icon i-cart-pink"></i>
+					</div>
+					<div class="cart-block-content hidden-xs">
+						<div class="cart-block-count">В корзине: <span class="colored-pink">5 тов.</span>
+						</div>
+						<div class="cart-block-sum hidden-xs">На сумму: <span class="colored-pink">1500 руб.</span>
+						</div>
+					</div>
+				</a>
+				<div class="phone-block hidden-xs">
+					<div class="icon-wrap">
+						<i class="icon i-smartphone"></i>
+					</div>
+					<div class="phone-block-content">
+						<div class="phone-block-phone">+7 (8452) 12-34-56</div>
+						<a href="#callback-popup" class="callback-trigger fancybox-modal colored-gray">помочь с
+							выбором?</a>
+					</div>
+				</div>
+			</div>
+			<nav class="categories-nav categories-nav-small">
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-dog-small"></i>
+					</span>
+					<div class="caption hidden-xs">Собаки</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-cat-small"></i>
+					</span>
+					<div class="caption hidden-xs">Кошки</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-fish-small"></i>
+					</span>
+					<div class="caption hidden-xs">Рыбы</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-parrot-small"></i>
+					</span>
+					<div class="caption hidden-xs">Птицы</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-mouse-small"></i>
+					</span>
+					<div class="caption hidden-xs">Грызуны</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-turtle-small"></i>
+					</span>
+					<div class="caption hidden-xs">Рептилии</div>
+				</a>
+			</nav>
+		</div>
+
+	</header>
+	<!-- end header -->
+	<!-- begin page-content -->
+	<div id="page-content">
+
+		<div class="layout">
+			<div class="container">
+				<div class="contact-page">
+					<div class="breadcrumbs">
+						<a href="" class="">Главная</a>
+						<span>Контакты</span>
+					</div>
+					<div class="section-title">
+						<div class="icon i-paw hidden-xs"></div>
+						<h2 class="section-heading"><span>Контакты</span></h2>
+					</div>
+					<div class="row">
+						<div class="contact-left col-md-6 col-sm-6 col-xs-12">
+							<p>Получить более подробную информацию о наших товарах, а также задать
+								любые интересующие вас вопросы вы можете: </p>
+							<p>По телефону: 8 (927) 220-21-61</p>
+							<p>По электронной почте: kotopes@kotopes.ru</p>
+							<p>В одном из <a href="">наших магазинов</a></p>
+							<p>Специалисты будут рады ответить вам в любой день недели с 9.00 до 20.00</p>
+						</div>
+						<form class="contact-form col-md-6 col-sm-6 col-xs-12">
+							<h4>Или через форму обратной связи</h4>
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<input type="text" class="field" name="name" placeholder="Ваше имя">
+									<input type="text" class="field" name="phone-mail" placeholder="Телефон или e-mail">
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<textarea class="field field-text" name="question"
+											  placeholder="Ваш вопрос?"></textarea>
+								</div>
+							</div>
+
+							<button class="btn btn-pink btn-full">отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- end page-content -->
+	<!-- start to-cart-popup -->
+	<div class="to-cart-popup" id="to-cart-popup">
+		<a href="" class="popup-close">
+			<svg aria-hidden="true" class="icon-cross">
+				<use xlink:href="images/sprites/svg-symbols.svg#cross"></use>
+			</svg>
+		</a>
+		<h2>товар добавлен в корзину</h2>
+		<div class="added-item">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="image"><img src="images/item-added.jpg" alt=""></div>
+				<p class="text">LITTLE ONE корм для шиншилл
+					900 г название в две строки</p>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-12">10 шт.</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="price">12840 руб.</div>
+			</div>
+		</div>
+
+		<div class="to-cart-popup-buttons">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-12"><a href="" class="btn btn-gray btn-full">продолжить покупки</a>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12"><a href="" class="btn btn-pink btn-full">перейти в корзину</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end to-cart-popup -->
+	<!-- begin footer -->
+	<footer class="footer">
+		<div class="container hidden-xs">
+			<nav class="categories-nav categories-nav-small">
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-dog-small"></i>
+					</span>
+					<div class="caption hidden-xs">Собаки</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-cat-small"></i>
+					</span>
+					<div class="caption hidden-xs">Кошки</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-fish-small"></i>
+					</span>
+					<div class="caption hidden-xs">Рыбы</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-parrot-small"></i>
+					</span>
+					<div class="caption hidden-xs">Птицы</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-mouse-small"></i>
+					</span>
+					<div class="caption hidden-xs">Грызуны</div>
+				</a>
+				<a href="">
+					<span class="icon-wrap">
+						<i class="icon i-turtle-small"></i>
+					</span>
+					<div class="caption hidden-xs">Рептилии</div>
+				</a>
+			</nav>
+		</div>
+		<div class="footer-middle hidden-xs">
+			<div class="container">
+
+				<a href="" class="logo"><img src="images/logo-small.png" alt="Котопес - зоомаркет"></a>
+				<nav class="footer-nav">
+					<a href="">о компании</a>
+					<a href="">оптовым клиентам</a>
+					<a href="">наши магазины</a>
+					<a href="">контакты</a>
+					<a href="">доставка и оплата</a>
+				</nav>
+				<form class="search-form">
+					<input type="search" class="field field-search" placeholder="Начните вводить запрос" name="search">
+					<button class="icon i-search"></button>
+				</form>
+				<a class="cart-block" href="">
+					<div class="icon-wrap">
+						<i class="icon i-cart-pink"></i>
+					</div>
+					<div class="cart-block-content hidden-xs">
+						<div class="cart-block-count">В корзине: <span class="colored-pink">5 тов.</span>
+						</div>
+						<div class="cart-block-sum hidden-xs">На сумму: <span class="colored-pink">1500 руб.</span>
+						</div>
+					</div>
+				</a>
+				<div class="phone-block hidden-xs">
+					<div class="icon-wrap">
+						<i class="icon i-smartphone"></i>
+					</div>
+					<div class="phone-block-content">
+						<div class="phone-block-phone">+7 (8452) 12-34-56</div>
+						<a href="#callback-popup" class="callback-trigger fancybox-modal colored-gray">помочь с
+							выбором?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="copyright">Copyright © 2016 «Котопес», Товары для животных по Саратову и Саратовской
+					области
+				</div>
+				<div class="made-by">Разработка сайта: <a href="">cherepkova.ru</a></div>
+			</div>
+
+		</div>
+	</footer>
+	<!-- end footer -->
+	<button class="icon i-arr-up arrow-up js-arrow-up"></button>
+</div>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/libs.js"></script>
+<script src="scripts/main.js"></script>
+</body>
+
+</html>

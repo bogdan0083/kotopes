@@ -1,0 +1,522 @@
+
+.header
+    text-align: center
+    padding-top: 5px
+    position: relative
+    margin-bottom: 15px
+    +above($screen-sm)
+        margin-bottom: 0
+    &:after
+        content ''
+        width: 100%
+        height: 10px
+        background: linear-gradient(to bottom, rgba(black, 0.1), transparent)
+        left 0
+        bottom -10px
+        position: absolute
+    +above($screen-sm)
+        padding-top: 10px
+    &:before
+        content ''
+        width: 100%
+        height: 1px
+        background-color: #ececec
+        top 45px
+        position: absolute
+        z-index: 1px
+        left 0
+        +above($screen-sm)
+            display: none
+    .container
+        position: relative
+    .logo
+        height: 34px
+        width: 126px
+        display: block
+        margin: 0 auto
+        overflow: hidden
+        position: relative
+        z-index: 4
+        +above($screen-sm)
+            height auto
+            width 200px
+            float: left
+    .cart-block
+        position: absolute
+        right 10px
+        top 4px
+        +above($screen-sm)
+            position: relative
+            right auto
+            top auto
+    h2
+        font-size: 1rem
+        font-weight: 300
+        line-height: 1.3
+        text-align: left
+        clear both
+        display: inline-block
+        float: left
+        margin-top: 20px
+        +above($screen-md)
+            float: left
+            clear: none
+            margin-top: 13px
+            margin-left: 30px
+            margin-right: 30px
+        +between(880px, 1200px)
+            display: none
+    .mobile-call
+        float: right
+        margin-top: 23px
+        width: 130px
+        .icon
+            margin-right: 10px
+        +above($screen-sm)
+            display: none
+    &-content
+        +above($screen-sm)
+            float: left
+            margin-left: -200px
+            padding-left: 230px
+            width: 100%
+            padding-bottom: 17px
+        +above($screen-md)
+            padding-left: 440px
+            margin-left: -440px
+    .main-nav
+        clear both
+        text-align: justify
+        border-bottom: 1px solid #ececec
+        position: relative
+        overflow: hidden
+        margin-bottom: 20px
+        .line
+            position: absolute
+            left 0
+            bottom 0
+            width: 100px
+            height: 1px
+            background-color: $pink
+        a, span
+            text-decoration: none
+            color black
+            opacity: 0.9
+            display: inline-block
+            position: relative
+            top 3px
+        &:after
+            content ''
+            display: inline-block
+            text-align: justify
+            width: 100%
+        .line
+            transition all 0.6s
+            opacity: 0
+    .phone-block
+        float: right
+        margin-top: 1px
+
+.mobile-search-trigger
+    width: 30px
+    height: 30px
+    text-align: center
+    display: inline-block
+    border-radius 50%
+    border none
+    background: $gray-light url(../images/icons/search.png) no-repeat center center
+    position: absolute
+    right 52px
+    top 4px
+    &:focus
+        outline none
+    +above($screen-sm)
+        display: none
+
+.search-form
+    width: 100%
+    position: absolute
+    top 54px
+    left 0
+    visibility: hidden
+    opacity: 0
+    transition visibility 0.3s, opacity 0.3s 0.1s
+    &.active
+        visibility: visible
+        opacity: 1
+    .i-search
+        position: absolute
+        right 10%
+        top 10px
+    .field-search
+        width: 95%
+        padding-right: 60px
+        box-sizing border-box
+    +above($screen-sm)
+        position: relative
+        top 0
+        display: inline-block
+        visibility: visible
+        opacity: 1
+        width: 260px
+        vertical-align: middle
+        float: left
+
+.cart-block
+    width: 30px
+    height: 30px
+    background-color: $gray-light
+    text-align: center
+    display: inline-block
+    padding-top: 4px
+    border-radius 50%
+    color black
+    text-decoration: none
+    line-height: 1.3
+    vertical-align: middle
+    a
+        color black
+    +above($screen-sm)
+        width: auto
+        height: auto
+        position: relative
+        display: inline-block
+        padding-top: 0
+        background: none
+        text-align: left
+        padding-left: 48px
+        .icon-wrap
+            position: absolute
+            left 0
+            top 50%
+            margin-top: -20px
+            width: 40px
+            height: 40px
+            background-color: #f9f9f9
+            border-radius 50%
+            text-align: center
+            padding-top: 8px
+
+.phone-block
+    position: relative
+    display: inline-block
+    background: none
+    text-align: left
+    padding-left: 48px
+    vertical-align: middle
+    .callback-trigger
+        border-bottom:1px dotted $gray
+        text-decoration: none
+        display: block
+        margin-top: 4px
+    .icon-wrap
+        position: absolute
+        left 0
+        top 50%
+        margin-top: -20px
+        width: 40px
+        height: 40px
+        background-color: #f9f9f9
+        border-radius 50%
+        text-align: center
+        padding-top: 8px
+
+.categories-nav
+    clear both
+    +above($screen-sm)
+        position: relative
+        &:before
+            content ''
+            position: absolute
+            top 0
+            width: 100%
+            left 0
+            height: 10px
+            background: linear-gradient(to bottom, rgba(black, 0.075), transparent)
+    .active
+        cursor default
+        pointer-events none
+    a
+        float: left
+        width: 16.6666%
+        display: block
+        position: relative
+        text-decoration: none
+        overflow: hidden
+        border-top: 1px solid transparent
+        transition all 0.3s
+        .room
+            opacity: 0.1
+            position: absolute
+            left 0
+            top 10px
+            display: none
+            +above($screen-sm)
+                display: block
+        &:hover, &.active
+            border-top-color $pink
+            .icon:before
+                opacity: 1
+            .icon:after
+                opacity: 0
+            .icon-wrap
+                background-color: transparent
+            .moveUp, .moveDown, .moveLeft, .moveRight
+                transform none
+        .icon-wrap
+            display: block
+            height: 40px
+            width: 40px
+            background-color: #f9f9f9
+            border-radius 50%
+            margin: 0 auto
+            transition all 0.3s
+            +above($screen-sm)
+                width: 70px
+                height: 70px
+            &:before
+                content ''
+                height: 100%
+                vertical-align: middle
+                display: inline-block
+        +above($screen-sm)
+            height: 138px
+            padding-top: 18px
+            border-left: 1px solid transparent
+            border-right: 1px solid transparent
+            &:last-child:after
+                display: none
+            .caption
+                text-transform: uppercase
+                color black
+                margin-top: 10px
+            &:after
+                content ''
+                position: absolute
+                right 0
+                top 50%
+                width: 1px
+                height: 100px
+                margin-top: -50px
+                background-color: #f1f1f1
+    clearfix()
+
+
+.categories-nav-big
+    a:nth-child(3)
+        svg
+            top 24px
+            left -2px
+    .i-dog-small
+        +above($screen-sm)
+            spriteWidth($dog)
+            spriteHeight($dog)
+            &:after
+                sprite($dog)
+            &:before
+                sprite($dog_hover)
+    .i-cat-small
+        +above($screen-sm)
+            spriteWidth($cat)
+            spriteHeight($cat)
+            &:after
+                sprite($cat)
+            &:before
+                sprite($cat_hover)
+    .i-fish-small
+        +above($screen-sm)
+            spriteWidth($fish)
+            spriteHeight($fish)
+            &:after
+                sprite($fish)
+            &:before
+                sprite($fish_hover)
+    .i-parrot-small
+        +above($screen-sm)
+            spriteWidth($parrot)
+            spriteHeight($parrot)
+            &:after
+                sprite($parrot)
+            &:before
+                sprite($parrot_hover)
+    .i-mouse-small
+        +above($screen-sm)
+            spriteWidth($mouse)
+            spriteHeight($mouse)
+            &:after
+                sprite($mouse)
+            &:before
+                sprite($mouse_hover)
+    .i-turtle-small
+        +above($screen-sm)
+            spriteWidth($turtle)
+            spriteHeight($turtle)
+            &:after
+                sprite($turtle)
+            &:before
+                sprite($turtle_hover)
+
+.header .categories-nav-small
+    border-top: 1px solid #f1f1f1
+    a
+        height auto
+        padding-bottom: 5px
+        +above($screen-sm)
+            height 40px
+            padding-bottom: 0
+
+.categories-nav-small
+    +above($screen-sm)
+        &:before, &:after
+            display: none
+            background: none
+    clearfix()
+    a
+        padding-top: 5px
+        height: 40px
+        border-top: 0
+        +above($screen-sm)
+            padding-top: 5px
+            height: 40px
+            padding-left: 15px
+        &:hover .caption, &.active .caption
+            color $pink
+        &:after
+            height: 20px
+            margin-top: -10px
+        .icon-wrap
+            display: inline-block
+            position: relative
+            .icon
+                position: absolute
+                left 50%
+                top 50%
+                transform translate(-50%, -50%)
+            +above($screen-sm)
+                width: 30px
+                height: 30px
+                background-color: #f6f6f6
+                vertical-align: middle
+                &:before
+                    display: none
+        .caption
+            transition all 0.3s
+            +above($screen-sm)
+                display: inline-block
+                vertical-align: middle
+                margin-left: 30px
+                margin-top: 1px
+    a
+        +above($screen-sm)
+            padding-left: 10px
+            .caption
+                +above($screen-sm)
+                    margin-left: 13px
+                +above($screen-md)
+                    margin-left: 35px
+.btn
+    width: 170px
+    text-align: center
+    text-decoration: none
+    background-color: #f9f9f9
+    transition all 0.3s
+    display: inline-block
+    height: 40px
+    line-height: 40px
+    border none
+    color black
+    &:hover
+        background-color: darken(#f9f9f9, 10%)
+    &-pink
+        background-color: $pink
+        color white
+        &:hover
+            background-color: $pink-dark
+            color white
+    &-full
+        width: 100%
+    &-gray
+        background-color: #8c8c8c
+        color white
+        &:hover
+            color white
+            background-color: black
+    &-cart
+        width: 140px
+        text-align: left
+        padding-left: 15px
+        line-height: 40px
+        vertical-align: middle
+        .icon
+            margin-right: 20px
+    &-wide
+        width: 240px
+        &.btn-cart
+            .icon
+                margin-right: 35px
+
+.moveUp, .moveLeft, .moveRight, .moveDown
+    transition all 0.3s
+
+.moveUp
+    transform translateY(-100px)
+
+.moveLeft
+    transform translateX(-100px)
+    transition-delay 0.2s
+
+.moveRight
+    transform translateX(100px)
+    transition-delay 0.3s
+
+.moveDown
+    transform translateY(100px)
+    transition-delay 0.1s
+
+.phone-block:hover, .cart-block:hover
+    .icon:before
+        opacity: 1
+
+
+.contact-page
+    padding-bottom: 20px
+    overflow: hidden
+
+.contact-left
+    line-height: 1.4
+
+.contact-form
+    margin-top: 30px
+    +above($screen-sm)
+        margin-top: 0
+    h4
+        text-align: center
+        font-weight: 400
+        margin-bottom: 0
+        margin-top: 0
+    .field
+       margin 20px 0
+
+.map-wrapper
+    height: 350px
+    margin-bottom: -20px
+    margin-top: 20px
+    +above($screen-sm)
+        margin-bottom: -40px
+
+
+.shops-block
+    text-align: center
+    margin 20px 0
+    h3
+        text-transform: uppercase
+        color $pink
+        font-weight: 300
+    h4, p
+        margin-bottom: 0
+        line-height: 1.4
+    p
+        margin-top: 0
+    h4
+        color #a5a5a5
+        font-weight: 300

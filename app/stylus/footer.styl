@@ -1,0 +1,94 @@
+.footer
+    position: relative
+    border-top:1px solid #f1f1f1
+    padding 20px 0
+    margin-top: 20px
+    +above($screen-sm)
+        padding-bottom: 0
+        padding-top: 0
+        margin-top: 40px
+        position: absolute
+        left 0
+        bottom 0
+        width: 100%
+    .categories-nav
+        clear both
+        border-top: 0
+        &:before
+            display: none
+            background none
+        clearfix()
+        a
+            +above($screen-sm)
+                padding-left: 10px
+            .caption
+                +above($screen-sm)
+                    margin-left: 13px
+                +above($screen-md)
+                    margin-left: 35px
+    &:after
+        content ''
+        width: 100%
+        height: 10px
+        background: linear-gradient(to top, rgba(black, 0.1), transparent)
+        left 0
+        top -10px
+        position: absolute
+    .copyright, .made-by
+        text-align: center
+        line-height: 1.5
+        font-size: 0.9rem
+    .footer-middle
+        border-top:1px solid #f1f1f1
+        +above($screen-sm)
+            padding-top: 25px
+            padding-bottom: 10px
+    .footer-bottom
+        +above($screen-sm)
+            clearfix()
+            clear: both
+            overflow: hidden
+            padding 6px 0
+            border-top:1px solid #f1f1f1
+    .made-by
+        margin-top: 10px
+    .copyright
+        +above($screen-sm)
+            float: left
+    .made-by
+        +above($screen-sm)
+            float: right
+            margin-top: 0
+    .logo, .footer-nav
+        display: inline-block
+        vertical-align: middle
+    .search-form
+        float: none
+    .footer-nav
+        width: 300px
+        margin-left: 30px
+        display: none
+        +above($screen-md)
+            display: inline-block
+        a
+            text-decoration: none
+            color black
+            display: inline-block
+            width: 50%
+            margin-right: -4px
+            padding-right: 5px
+            margin-top: 6px
+            margin-bottom: 6px
+            vertical-align: top
+            transition all 0.3s
+            &:hover
+                color $pink
+    .search-form, .cart-block, .phone-block
+        margin 0 25px
+        +above($screen-md)
+            margin 0 26px
+    .phone-block
+        margin-right: 0
+        +above($screen-md)
+            border-right: 0
+

@@ -1,0 +1,97 @@
+generateClasses($sprites) {
+  for $sprite in $sprites {
+    $sprite_name = $sprite[9];
+
+    if match('hover', $sprite_name) {
+    } else {
+      .i-{$sprite_name} {
+        spriteWidth($sprite);
+        spriteHeight($sprite);
+
+        &:after {
+          sprite($sprite)
+        }
+      }
+    }
+
+  }
+}
+
+// TRIANGLE
+
+triangle(width = 10px, height = 10px, direction = 'bottom', color = #000)
+
+  // Base triangle styles
+  width 0
+  height 0
+  background 0
+  border-style solid
+
+  // Styles for each direction
+  directions = {
+    top: {
+      border-width: 0 (width * .5) height (width * .5),
+      border-color: transparent transparent color transparent
+    },
+    topRight: {
+      border-width: 0 width height 0,
+      border-color: transparent color transparent transparent
+    },
+    right: {
+      border-width: (height * .5) 0 (height *.5) width,
+      border-color: transparent transparent transparent color
+    },
+    bottomRight: {
+      border-width: 0 0 height width,
+      border-color: transparent transparent color transparent
+    },
+    bottom: {
+      border-width: height (width * .5) 0 (width * .5),
+      border-color: color transparent transparent transparent
+    },
+    bottomLeft: {
+      border-width: width 0 0 height,
+      border-color: transparent transparent transparent color
+    },
+    left: {
+      border-width: (height * .5) width (height * .5) 0,
+      border-color: transparent color transparent transparent
+    },
+    topLeft: {
+      border-width: height width 0 0,
+      border-color: color transparent transparent transparent
+    }
+  }
+
+  // Mixin styles for passed direction
+  styles = directions[direction]
+  {styles}
+  
+// FONT FACE
+// =========
+//
+
+font-url(file)
+  return url(file)
+
+webfont(family, file, weight = normal, style = normal)
+  @font-face
+    font-family family
+    src font-url(file + '.eot')
+    src font-url(file + '.eot?#iefix') format('embedded-opentype'),
+    font-url(file + '.woff') format('woff'),
+    font-url(file + '.ttf') format('truetype'),
+    font-url(file + '.svg#'+ family) format('svg')
+    font-weight weight
+    font-style style
+    
+toPercents(pixels, width)
+  pixels / width * 100%
+
+
+webfont('Lato', '../fonts/lato-regular', normal, normal)
+webfont('Lato', '../fonts/lato-light', 300, normal)
+webfont('Lato', '../fonts/lato-bold', 700, normal)
+webfont('Lato', '../fonts/lato-bolditalic', 700, italic)
+webfont('Lato', '../fonts/lato-lightitalic', 300, italic)
+webfont('Lato', '../fonts/lato-italic', normal, italic)
